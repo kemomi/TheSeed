@@ -3,7 +3,6 @@
   
 ---
 
-```markdown
 # The Seed
 
 基于 **Unreal Engine 5.3+** 的 XR（VR+MR）动作游戏开发模板，  
