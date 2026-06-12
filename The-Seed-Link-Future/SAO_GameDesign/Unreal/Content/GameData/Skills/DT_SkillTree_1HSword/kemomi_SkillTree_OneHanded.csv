@@ -1,0 +1,11 @@
+SkillID,ParentSkillID,SkillName,SkillType,UnlockCondition,ProficiencyRequired,Cost,Cooldown,DamageMultiplier,SpecialEffect,AnimationRow
+1001,,垂直斩,Active,初始解锁,0,20,6,1.5,可破盾,AM_Vertical
+1002,,水平斩,Active,初始解锁,0,15,4,1.2,扇形范围,AM_Horizontal
+1003,1001,垂直二连斩,Active,熟练度150,150,30,8,1.8,第二击可造成浮空,AM_Vertical2Hit
+1004,1003,垂直三方,Active,熟练度350,350,45,12,2.2,第三击终结击倒,AM_Vertical3Hit
+1005,1002,水平弧光,Active,熟练度200,200,25,6,1.4,扇形扩大30%,AM_HorizontalWide
+1010,,突刺,Active,熟练度100,100,20,8,2.0,贯穿减甲20%,AM_Linear
+1011,1010,闪光突刺,Active,熟练度300,300,35,10,2.5,突进距离+2米，带穿透,AM_FlashLinear
+1020,,回旋斩,Active,熟练度250,250,40,12,0.8×2,360°近身击退,AM_Cyclone
+1021,1020,暴风回旋,Active,熟练度500+任务,500,60,18,1.0×3,大幅击退，附加眩晕,AM_StormCyclone
+1099,,星爆气流斩,奥义,熟练度1000+双持+任务,1000,100,180,每击0.6(共16击),全程无敌，终结爆炸,AM_StarburstStream

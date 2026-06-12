@@ -1,0 +1,14 @@
+Phase,AttackID,AttackName,Animation,TriggerRange(cm),Damage,PoiseBreak,HitStop(ms),TrackingType,NextAttackChainIDs,SpecialLogic
+1,101,纵劈,AM_Boss_Axe_Overhead,0-250,60,30,50,FacePlayer,102;103,命中后减速20%持续1秒
+1,102,横扫,AM_Boss_Axe_Sweep,150-350,45,20,40,FacePlayer,101;104,
+1,103,盾击,AM_Boss_Shield_Bash,0-200,30,50,60,FacePlayer,104,击退4米，附加眩晕2秒
+1,104,咆哮,AM_Boss_Roar,0-500,0,0,0,Self,101;102;105,全屏击退，清除仇恨
+1,105,跳劈,AM_Boss_JumpSmash,400-800,80,60,80,GroundTarget,,落地产生冲击波
+2,201,三连斩,AM_Boss_Katana_3Hit,0-200,35×3,15×3,30,FacePlayer,202;203,第三击可格挡反击
+2,202,突刺,AM_Boss_Katana_Thrust,300-700,70,40,40,FacePlayer,201;204,附带出血(10伤害/秒，5秒)
+2,203,回旋斩,AM_Boss_Katana_Spin,0-400,50,25,45,Self,204,周身360°判定
+2,204,居合,AM_Boss_Katana_Iai,200-500,90,50,70,FacePlayer,,短暂蓄力，快斩，破防
+3,301,双剑乱舞,AM_Boss_Dual_Flurry,0-200,25×8,8×8,20,FacePlayer,302,每击可改变方向，极易打断动作
+3,302,交叉斩,AM_Boss_Dual_Cross,0-250,60×2,40,50,FacePlayer,301;303,二连击，第二击造成流血
+3,303,血腥回旋,AM_Boss_Dual_SpinSlash,0-400,70,30,45,Self,301,旋转两圈，攻击范围扩大至5米
+3,304,濒死狂暴,AM_Boss_Enrage,自动触发(<10%HP),-,-,-,Self,-,攻击速度+50%，防御-30%，持续至死亡

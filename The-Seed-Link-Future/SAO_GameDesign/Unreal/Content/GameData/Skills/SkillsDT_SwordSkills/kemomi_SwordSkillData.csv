@@ -1,0 +1,6 @@
+SkillID,SkillName,ResourceCost,Cooldown,BaseDamageMultiplier,StaminaBreak,PostureBreak,MinRange,MaxRange,HitCount,ActivationTime,RecoveryTime,bIsArmorBreak,bIsGuardBreak,CameraShakeScale
+1001,垂直斩,20,6.0,1.5,20,30,50,250,1,0.1,0.5,true,false,0.5
+1002,水平斩,15,4.0,1.2,10,15,100,350,1,0.1,0.3,false,false,0.3
+1003,垂直二连斩,30,8.0,1.8,40,60,50,250,2,0.1,0.8,false,false,0.7
+1020,回旋斩,40,12.0,0.8,5,10,0,400,2,0.2,1.0,false,true,0.9
+...
