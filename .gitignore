@@ -1,0 +1,30 @@
+# Unreal Engine 5
+/Binaries/
+/Build/
+/DerivedDataCache/
+/Intermediate/
+/Saved/
+*.log
+
+# Visual Studio / Rider
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.idea/
+
+# macOS
+.DS_Store
+
+# Packaged / shipped builds
+*.apk
+*.aab
+*.ipa
+*.app
+
+# Lock and temp files
+*.lock
+
+# Keep the project descriptor
+!*.uproject

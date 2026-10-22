@@ -1,0 +1,7 @@
+SkillName,Trigger,DamageMultiplier,HitStun,Cooldown,SwordGaugeCost,SpecialEffect
+垂直斩(Vertical),武器竖直上举后下劈,1.50,0.6,6,20,可劈开盾牌防御
+水平斩(Horizontal),武器水平横摆,1.20,0.4,4,20,扇形范围伤害
+突刺(Linear),向前方直刺,2.00,0.8,8,30,击退+贯穿护甲
+回旋斩(Cyclone),原地水平画圆两次,0.80,1.0,12,40,360度近身吹飞(每击0.8倍)
+水平二连斩,水平横摆两次,1.20,0.5,5,25,二连击连携-熟练度150解锁
+星爆气流斩(StarburstStream),双持奥义起手,3.00,1.5,30,80,多段爆发-需双持并完成任务解锁

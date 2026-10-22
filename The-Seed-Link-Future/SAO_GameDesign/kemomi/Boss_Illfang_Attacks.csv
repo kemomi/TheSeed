@@ -1,0 +1,10 @@
+Name,Phase,AttackType,Damage,MinRange,MaxRange,Cooldown,HitStun,Montage,Weight,SpecialEffect,Notes
+Axe_VerticalChop,1,Melee,65,0.0,3.0,2.5,0.60,Mont_Axe_VerticalChop,40,Knockback_Light,纵劈-阶段一主战招
+Axe_HorizontalSweep,1,Melee,55,0.0,4.0,3.0,0.50,Mont_Axe_HorizontalSweep,35,AOE_Sector,横扫-扇形范围
+Shield_Bash,1,Melee,50,0.0,2.0,3.5,0.40,Mont_Shield_Bash,25,Knockback_Strong+Stun,盾击-强制击退
+Tachi_Thrust,2,Melee,90,1.0,5.0,1.8,0.50,Mont_Tachi_Thrust,30,Pierce_IgnoreArmor,突刺-贯穿护甲
+Tachi_ThreeSlash,2,Combo,80,0.0,3.0,2.2,0.40,Mont_Tachi_ThreeSlash,30,Combo_3Hit,三连斩
+Tachi_ParryCounter,2,Counter,100,0.0,2.0,4.0,0.70,Mont_Tachi_ParryCounter,20,Parry+Riposte,弹反正面攻击后反击
+Dual_FrenzySlash,3,Combo,60,0.0,2.0,0.8,0.30,Mont_Dual_FrenzySlash,35,Bleed_5s,狂乱连斩-高频低伤
+Dual_CrossSlash,3,Melee,110,0.0,3.0,2.0,0.60,Mont_Dual_CrossSlash,25,Bleed+Knockback,十字斩-高伤爆发
+Dual_WhirlBlade,3,AOE,45,0.0,4.0,3.5,0.50,Mont_Dual_WhirlBlade,20,AOE_Circle+Bleed,回旋双刃-360度

@@ -1,0 +1,7 @@
+SkillID,SkillName,Tier,PrerequisiteSkillID,RequiredProficiency,SwordGaugeCost,Cooldown,DamageMultiplier,Description
+SK_1H_Vertical,垂直斩(Vertical),1,,0,20,6,1.50,武器竖直上举后下劈-可破盾牌防御
+SK_1H_Horizontal,水平斩(Horizontal),1,,0,20,4,1.20,水平横摆-扇形范围伤害
+SK_1H_Linear,突刺(Linear),1,,0,30,8,2.00,前方直刺-击退并贯穿护甲
+SK_1H_Cyclone,回旋斩(Cyclone),2,SK_1H_Vertical,100,40,12,0.80,原地水平画圆两次-360度近身吹飞(每击0.8倍)
+SK_1H_HorizontalDouble,水平二连斩,2,SK_1H_Horizontal,150,25,5,1.20,熟练度150解锁-二连横斩连携
+SK_1H_StarburstStream,星爆气流斩(StarburstStream),3,SK_1H_Cyclone,500,80,30,3.00,奥义-需双持-熟练度500并完成专属任务解锁

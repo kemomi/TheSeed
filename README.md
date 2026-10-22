@@ -57,13 +57,19 @@ TheSeed/
 ├── The-Seed-Link-Future/
 │   └── SAO_GameDesign/        # 社区设计提交目录
 │       └── kemomi/            # 示例贡献者文件夹
-│           ├── README.md
-│           ├── SwordSkillSystem_kemomi.md
-│           ├── SwitchingSystem_kemomi.md
-│           ├── BossDesign_Floor1_kemomi.md
-│           ├── StatGrowthSystem_kemomi.md
-│           ├── GestureUISystem_kemomi.md
-│           └── ... (CSV 数据表)
+│           ├── README.md                # 设计包索引
+│           ├── SwordSkillSystem.md      # 剑技系统
+│           ├── SwitchingSystem.md       # 切换连携
+│           ├── BossDesign_Floor1.md     # 第一层 Boss 设计
+│           ├── BossAI_Phase1_BT.md      # Boss 阶段一行为树
+│           ├── StatGrowthSystem.md      # 数值与成长
+│           ├── GestureUISystem.md       # 手势 UI 交互
+│           ├── SwordSkillData.csv       # 剑技数值表
+│           ├── SkillTree_OneHanded.csv  # 单手剑技能树
+│           └── Boss_Illfang_Attacks.csv # 伊尔方招式表
+├── .gitignore                 # Unreal Engine 忽略规则
+├── CONTRIBUTING.md            # 贡献指南
+├── LICENSE                    # MIT 许可证
 └── README.md
 ```
 
