@@ -129,8 +129,7 @@ TheSeed/
 5. 参考 `The-Seed-Link-Future/SAO_GameDesign/` 中的设计文档理解游戏系统意图  
 
 ---
-
+```
 *“这个世界的种子，现在就在你的手中。”*
 ```
-
 ---
