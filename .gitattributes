@@ -1,0 +1,18 @@
+# 强制文本文件使用 LF，保证跨平台字节一致与确定性
+# （CSV 必须无 CR 见 00 §3.3；MANIFEST sha256 依赖字节一致见 03 §5）
+* text=auto eol=lf
+
+# 明确文本类型
+*.md text eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+*.py text eol=lf
+*.txt text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# 二进制资产（禁止任何行尾转换，否则破坏 GLB/PNG）
+*.glb binary
+*.png binary
+*.jpg binary
+*.ico binary

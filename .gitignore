@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# 构建中间产物（可复现，不入库；assets/ 产物入库以便引擎侧直接引用）
+# 如需 assets/ 也不入库，取消下行注释：
+# assets/
+
+# 引擎工程（L2，待生成）
+.godot/
+.import/
+*.import
+Intermediate/
+Saved/
+Binaries/
+DerivedDataCache/
+*.sln
+*.VC.db
+
+# Android 打包产物
+*.apk
+*.aab
+*.keystore
+build/*.apk
+build/*.aab
+local.properties
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/
+*.swp

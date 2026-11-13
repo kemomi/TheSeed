@@ -1,0 +1,6 @@
+npc_id,name_cn,name_romaji,role,zone_id,hostile,asset_variant,prop_asset,anim_set,interact_radius_m,greet_radius_m,default_affinity,shop_id,service_id,dialogue_root
+npc_mino,三乃,Mino,tea_stall,zone_tea_stall,false,mino,asset_npc_prop_teacup,npc_base,4.0,8.0,20,shop_mino,,dlg_mino_root
+npc_tsubaki,椿,Tsubaki,shrine_maiden,zone_azumaya,false,tsubaki,asset_npc_prop_miko_wand,npc_base,4.0,8.0,20,,service_save,dlg_tsubaki_root
+npc_genzo,源藏,Genzo,stonemason,zone_karesansui,false,genzo,asset_npc_prop_hammer,npc_base,4.0,8.0,20,,service_forge,dlg_genzo_root
+npc_kaede,枫,Kaede,garden_guard,zone_ishidoro_path,false,kaede,asset_npc_prop_lantern,npc_base,4.0,8.0,20,,quest_lantern_lighting,dlg_kaede_root
+npc_busho,绯甲武者,Hikabuto Busho,area_guardian,zone_okunomori,true,busho,asset_weapon_tachi,hikabusho,5.0,12.0,0,,,dlg_busho_root

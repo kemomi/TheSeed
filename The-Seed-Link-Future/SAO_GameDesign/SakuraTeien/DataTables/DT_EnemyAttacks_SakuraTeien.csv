@@ -1,0 +1,9 @@
+attack_id,enemy_id,name_cn,phase,windup_s,damage,range_m,shape,interruptible,cooldown_s,anim_ref,notes
+atk_oni_slash,enemy_sakura_oni_grunt,挥砍,1,0.39,12,1.5,arc_120,false,2.5,anim_oni_attack,前抬手发光教学读招
+atk_oni_blade_slash,enemy_sakura_oni_blade,骨刀挥砍,1,0.32,20,1.8,arc_100,false,2.0,anim_oni_attack,速度快前摇短
+atk_oni_blade_combo,enemy_sakura_oni_blade,连斩,1,0.30,18,1.8,arc_100,false,0.0,anim_oni_attack,命中后30%概率接第二段
+atk_busho_horizontal,enemy_hikabuto_busho,横斩,1;2,0.40,35,2.2,arc_140,false,0.0,anim_busho_attack,可闪避不可打断
+atk_busho_upper,enemy_hikabuto_busho,上挑,2,0.35,35,1.8,arc_90,false,0.0,anim_busho_attack,仅Phase2三连第二段
+atk_busho_heavy,enemy_hikabuto_busho,重劈,1;2,0.70,55,2.2,arc_120,true,6.0,anim_busho_attack,长前摇可被剑技打断
+atk_busho_thrust,enemy_hikabuto_busho,突刺,1;2,0.50,40,4.0,line,false,5.0,anim_busho_attack,直线突进4m易侧闪
+atk_busho_combo3,enemy_hikabuto_busho,三连斩,2,0.30,35,2.2,arc_140,false,0.0,anim_busho_attack,段间0.3s可切换打断

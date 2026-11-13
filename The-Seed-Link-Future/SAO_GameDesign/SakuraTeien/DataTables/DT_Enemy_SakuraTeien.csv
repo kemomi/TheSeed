@@ -1,0 +1,4 @@
+enemy_id,name_cn,type,zone_id,hp,attack,defense,move_speed,attack_range_m,aggro_radius_m,hit_stop_s,exp_reward,asset_mesh,anim_set,behavior_tree,can_dodge,drops
+enemy_sakura_oni_grunt,樱鬼（兵）,grunt,zone_sakura_grove,120,12,3,1.6,1.5,8.0,0.04,15,asset_enemy_sakura_oni,sakura_oni,BT_SakuraOni_Grunt,false,item_sakura_crystal_shard:0.6;item_whetstone:0.1
+enemy_sakura_oni_blade,樱鬼（刃）,elite,zone_sakura_grove,180,20,5,2.6,1.8,10.0,0.04,35,asset_enemy_sakura_oni,sakura_oni,BT_SakuraOni_Blade,true,item_sakura_crystal:0.4;item_whetstone:0.2;item_oni_bone:0.15
+enemy_hikabuto_busho,绯甲武者,guardian,zone_okunomori,1200,35,18,2.2,2.2,12.0,0.05,300,asset_enemy_hikabusho,hikabusho,BT_Hikabusho,false,item_map_fragment:1.0;item_hikabusho_shard:0.5;weapon_tachi_hi:0.2

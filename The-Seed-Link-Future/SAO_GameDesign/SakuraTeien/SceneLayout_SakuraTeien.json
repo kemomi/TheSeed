@@ -1,0 +1,4733 @@
+{
+  "meta": {
+    "name": "LV_SakuraTeien_Main",
+    "version": "0.1.0-alpha",
+    "unit": "meter",
+    "coordinate": "right-handed, +Y=north, +X=east, +Z=up",
+    "generator": "tools/gen_scene_layout.py",
+    "source_of_truth": "02_LevelDesign_Hakoniwa.md",
+    "seed": 3520663300,
+    "engine_adapters": {
+      "godot": "godot_pos = (x, z, -y)",
+      "unreal": "ue_pos = (x*100, y*100, z*100)  # 1m=100uu, left-handed +Z up",
+      "unity": "unity_pos = (x, z, y)"
+    }
+  },
+  "zones": [
+    {
+      "id": "zone_torii_approach",
+      "name_cn": "鸟居参道",
+      "shape": "rect",
+      "size": [
+        4.0,
+        14.0
+      ],
+      "center": [
+        0.0,
+        -17.0,
+        0.0
+      ],
+      "safe": true,
+      "petal_density": 0.3,
+      "wind_deg": 180.0,
+      "navmesh": false,
+      "ground_z": 0.0
+    },
+    {
+      "id": "zone_tea_stall",
+      "name_cn": "茶摊",
+      "shape": "rect",
+      "size": [
+        5.0,
+        6.0
+      ],
+      "center": [
+        -7.0,
+        -13.0,
+        0.0
+      ],
+      "safe": true,
+      "petal_density": 0.4,
+      "wind_deg": 180.0,
+      "navmesh": false,
+      "ground_z": 0.0
+    },
+    {
+      "id": "zone_kyobashi",
+      "name_cn": "镜池·太鼓桥",
+      "shape": "circle",
+      "size": [
+        7.4
+      ],
+      "center": [
+        0.0,
+        0.0,
+        -0.3
+      ],
+      "safe": true,
+      "petal_density": 1.0,
+      "wind_deg": 315.0,
+      "navmesh": false,
+      "ground_z": -0.3
+    },
+    {
+      "id": "zone_azumaya",
+      "name_cn": "樱亭",
+      "shape": "rect",
+      "size": [
+        7.0,
+        7.0
+      ],
+      "center": [
+        11.0,
+        3.0,
+        0.45
+      ],
+      "safe": true,
+      "petal_density": 0.7,
+      "wind_deg": 315.0,
+      "navmesh": false,
+      "ground_z": 0.45
+    },
+    {
+      "id": "zone_karesansui",
+      "name_cn": "枯山水",
+      "shape": "rect",
+      "size": [
+        11.0,
+        10.0
+      ],
+      "center": [
+        -13.0,
+        -3.0,
+        0.0
+      ],
+      "safe": true,
+      "petal_density": 0.5,
+      "wind_deg": 270.0,
+      "navmesh": false,
+      "ground_z": 0.0
+    },
+    {
+      "id": "zone_ishidoro_path",
+      "name_cn": "石灯笼小径",
+      "shape": "rect",
+      "size": [
+        4.0,
+        13.0
+      ],
+      "center": [
+        -6.0,
+        12.0,
+        0.3
+      ],
+      "safe": true,
+      "petal_density": 0.4,
+      "wind_deg": 0.0,
+      "navmesh": true,
+      "ground_z": 0.3
+    },
+    {
+      "id": "zone_sakura_grove",
+      "name_cn": "樱花林",
+      "shape": "circle",
+      "size": [
+        7.0
+      ],
+      "center": [
+        3.0,
+        14.0,
+        0.6
+      ],
+      "safe": false,
+      "petal_density": 0.8,
+      "wind_deg": 0.0,
+      "navmesh": true,
+      "ground_z": 0.6
+    },
+    {
+      "id": "zone_okunomori",
+      "name_cn": "奥之森",
+      "shape": "circle",
+      "size": [
+        7.0
+      ],
+      "center": [
+        -2.0,
+        28.0,
+        1.2
+      ],
+      "safe": false,
+      "petal_density": 0.2,
+      "wind_deg": 0.0,
+      "navmesh": true,
+      "ground_z": 1.2
+    }
+  ],
+  "instances": [
+    {
+      "id": "torii_main_001",
+      "asset": "asset_torii_main",
+      "zone": "zone_torii_approach",
+      "position": [
+        0.0,
+        -22.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "box",
+      "destructible": false,
+      "tags": [
+        "landmark",
+        "boundary_south",
+        "spawn_gate"
+      ]
+    },
+    {
+      "id": "ground_tile_001",
+      "asset": "asset_ground_tile",
+      "zone": "zone_torii_approach",
+      "position": [
+        0.0,
+        -22.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "path"
+      ]
+    },
+    {
+      "id": "ground_tile_002",
+      "asset": "asset_ground_tile",
+      "zone": "zone_torii_approach",
+      "position": [
+        0.0,
+        -20.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "path"
+      ]
+    },
+    {
+      "id": "ground_tile_003",
+      "asset": "asset_ground_tile",
+      "zone": "zone_torii_approach",
+      "position": [
+        0.0,
+        -18.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "path"
+      ]
+    },
+    {
+      "id": "ground_tile_004",
+      "asset": "asset_ground_tile",
+      "zone": "zone_torii_approach",
+      "position": [
+        0.0,
+        -16.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "path"
+      ]
+    },
+    {
+      "id": "ground_tile_005",
+      "asset": "asset_ground_tile",
+      "zone": "zone_torii_approach",
+      "position": [
+        0.0,
+        -14.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "path"
+      ]
+    },
+    {
+      "id": "ground_tile_006",
+      "asset": "asset_ground_tile",
+      "zone": "zone_torii_approach",
+      "position": [
+        0.0,
+        -12.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "path"
+      ]
+    },
+    {
+      "id": "ground_tile_007",
+      "asset": "asset_ground_tile",
+      "zone": "zone_torii_approach",
+      "position": [
+        0.0,
+        -10.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "path"
+      ]
+    },
+    {
+      "id": "ishidoro_tall_001",
+      "asset": "asset_ishidoro_tall",
+      "zone": "zone_torii_approach",
+      "position": [
+        -1.7,
+        -20.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": true,
+      "tags": [
+        "lantern",
+        "lightable"
+      ]
+    },
+    {
+      "id": "ishidoro_tall_002",
+      "asset": "asset_ishidoro_tall",
+      "zone": "zone_torii_approach",
+      "position": [
+        1.7,
+        -20.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": true,
+      "tags": [
+        "lantern",
+        "lightable"
+      ]
+    },
+    {
+      "id": "ishidoro_tall_003",
+      "asset": "asset_ishidoro_tall",
+      "zone": "zone_torii_approach",
+      "position": [
+        -1.7,
+        -17.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": true,
+      "tags": [
+        "lantern",
+        "lightable"
+      ]
+    },
+    {
+      "id": "ishidoro_tall_004",
+      "asset": "asset_ishidoro_tall",
+      "zone": "zone_torii_approach",
+      "position": [
+        1.7,
+        -17.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": true,
+      "tags": [
+        "lantern",
+        "lightable"
+      ]
+    },
+    {
+      "id": "ishidoro_tall_005",
+      "asset": "asset_ishidoro_tall",
+      "zone": "zone_torii_approach",
+      "position": [
+        -1.7,
+        -14.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": true,
+      "tags": [
+        "lantern",
+        "lightable"
+      ]
+    },
+    {
+      "id": "ishidoro_tall_006",
+      "asset": "asset_ishidoro_tall",
+      "zone": "zone_torii_approach",
+      "position": [
+        1.7,
+        -14.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": true,
+      "tags": [
+        "lantern",
+        "lightable"
+      ]
+    },
+    {
+      "id": "ishidoro_tall_007",
+      "asset": "asset_ishidoro_tall",
+      "zone": "zone_torii_approach",
+      "position": [
+        -1.7,
+        -11.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": true,
+      "tags": [
+        "lantern",
+        "lightable"
+      ]
+    },
+    {
+      "id": "ishidoro_tall_008",
+      "asset": "asset_ishidoro_tall",
+      "zone": "zone_torii_approach",
+      "position": [
+        1.7,
+        -11.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": true,
+      "tags": [
+        "lantern",
+        "lightable"
+      ]
+    },
+    {
+      "id": "bamboo_cluster_001",
+      "asset": "asset_bamboo_cluster",
+      "zone": "zone_torii_approach",
+      "position": [
+        -3.09,
+        -22.84,
+        0.0
+      ],
+      "rotation_deg": [
+        -0.367,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "boundary"
+      ]
+    },
+    {
+      "id": "bamboo_cluster_002",
+      "asset": "asset_bamboo_cluster",
+      "zone": "zone_torii_approach",
+      "position": [
+        3.156,
+        -22.912,
+        0.0
+      ],
+      "rotation_deg": [
+        0.398,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "boundary"
+      ]
+    },
+    {
+      "id": "bamboo_cluster_003",
+      "asset": "asset_bamboo_cluster",
+      "zone": "zone_torii_approach",
+      "position": [
+        -3.383,
+        -19.73,
+        0.0
+      ],
+      "rotation_deg": [
+        -0.427,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "boundary"
+      ]
+    },
+    {
+      "id": "bamboo_cluster_004",
+      "asset": "asset_bamboo_cluster",
+      "zone": "zone_torii_approach",
+      "position": [
+        2.94,
+        -20.101,
+        0.0
+      ],
+      "rotation_deg": [
+        0.271,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "boundary"
+      ]
+    },
+    {
+      "id": "bamboo_cluster_005",
+      "asset": "asset_bamboo_cluster",
+      "zone": "zone_torii_approach",
+      "position": [
+        -3.08,
+        -16.804,
+        0.0
+      ],
+      "rotation_deg": [
+        0.85,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "boundary"
+      ]
+    },
+    {
+      "id": "bamboo_cluster_006",
+      "asset": "asset_bamboo_cluster",
+      "zone": "zone_torii_approach",
+      "position": [
+        3.148,
+        -17.171,
+        0.0
+      ],
+      "rotation_deg": [
+        -0.912,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "boundary"
+      ]
+    },
+    {
+      "id": "bamboo_cluster_007",
+      "asset": "asset_bamboo_cluster",
+      "zone": "zone_torii_approach",
+      "position": [
+        -3.306,
+        -13.804,
+        0.0
+      ],
+      "rotation_deg": [
+        -0.093,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "boundary"
+      ]
+    },
+    {
+      "id": "bamboo_cluster_008",
+      "asset": "asset_bamboo_cluster",
+      "zone": "zone_torii_approach",
+      "position": [
+        3.177,
+        -14.123,
+        0.0
+      ],
+      "rotation_deg": [
+        -0.574,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "boundary"
+      ]
+    },
+    {
+      "id": "bamboo_cluster_009",
+      "asset": "asset_bamboo_cluster",
+      "zone": "zone_torii_approach",
+      "position": [
+        -3.119,
+        -10.911,
+        0.0
+      ],
+      "rotation_deg": [
+        0.58,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "boundary"
+      ]
+    },
+    {
+      "id": "bamboo_cluster_010",
+      "asset": "asset_bamboo_cluster",
+      "zone": "zone_torii_approach",
+      "position": [
+        3.487,
+        -11.248,
+        0.0
+      ],
+      "rotation_deg": [
+        -0.735,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "boundary"
+      ]
+    },
+    {
+      "id": "sakura_tree_mid_001",
+      "asset": "asset_sakura_tree_mid",
+      "zone": "zone_torii_approach",
+      "position": [
+        -3.0,
+        -14.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "framing"
+      ]
+    },
+    {
+      "id": "sakura_tree_mid_002",
+      "asset": "asset_sakura_tree_mid",
+      "zone": "zone_torii_approach",
+      "position": [
+        3.0,
+        -14.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "framing"
+      ]
+    },
+    {
+      "id": "crystal_record_001",
+      "asset": "asset_crystal_record",
+      "zone": "zone_torii_approach",
+      "position": [
+        0.0,
+        -10.5,
+        0.9
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "pickup",
+        "quest_pond_crystal"
+      ]
+    },
+    {
+      "id": "tea_stall_001",
+      "asset": "asset_tea_stall",
+      "zone": "zone_tea_stall",
+      "position": [
+        -7.0,
+        -13.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "box",
+      "destructible": false,
+      "tags": [
+        "building",
+        "shop"
+      ]
+    },
+    {
+      "id": "item_dango_001",
+      "asset": "asset_item_dango",
+      "zone": "zone_tea_stall",
+      "position": [
+        -7.0,
+        -14.2,
+        1.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "shop_item",
+        "item_sakura_dango"
+      ]
+    },
+    {
+      "id": "bush_round_001",
+      "asset": "asset_bush_round",
+      "zone": "zone_tea_stall",
+      "position": [
+        -9.386,
+        -10.977,
+        0.0
+      ],
+      "rotation_deg": [
+        0.255,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "decor"
+      ]
+    },
+    {
+      "id": "bush_round_002",
+      "asset": "asset_bush_round",
+      "zone": "zone_tea_stall",
+      "position": [
+        -4.755,
+        -10.944,
+        0.0
+      ],
+      "rotation_deg": [
+        -0.127,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "decor"
+      ]
+    },
+    {
+      "id": "bush_round_003",
+      "asset": "asset_bush_round",
+      "zone": "zone_tea_stall",
+      "position": [
+        -9.263,
+        -14.933,
+        0.0
+      ],
+      "rotation_deg": [
+        0.25,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "decor"
+      ]
+    },
+    {
+      "id": "sakura_tree_small_001",
+      "asset": "asset_sakura_tree_small",
+      "zone": "zone_tea_stall",
+      "position": [
+        -4.6,
+        -15.2,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "decor"
+      ]
+    },
+    {
+      "id": "moss_patch_001",
+      "asset": "asset_moss_patch",
+      "zone": "zone_tea_stall",
+      "position": [
+        -8.5,
+        -12.0,
+        0.01
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "decor"
+      ]
+    },
+    {
+      "id": "water_surface_001",
+      "asset": "asset_water_surface",
+      "zone": "zone_kyobashi",
+      "position": [
+        0.0,
+        0.0,
+        -0.25
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "box",
+      "destructible": false,
+      "tags": [
+        "water",
+        "pond"
+      ]
+    },
+    {
+      "id": "kyobashi_001",
+      "asset": "asset_kyobashi",
+      "zone": "zone_kyobashi",
+      "position": [
+        0.0,
+        0.0,
+        -0.25
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "box",
+      "destructible": false,
+      "tags": [
+        "bridge",
+        "landmark"
+      ]
+    },
+    {
+      "id": "shishiodoshi_001",
+      "asset": "asset_shishiodoshi",
+      "zone": "zone_kyobashi",
+      "position": [
+        4.2,
+        3.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "shishiodoshi",
+        "sound_trigger"
+      ]
+    },
+    {
+      "id": "rock_cluster_a_001",
+      "asset": "asset_rock_cluster_a",
+      "zone": "zone_kyobashi",
+      "position": [
+        -4.986,
+        -2.896,
+        -0.1
+      ],
+      "rotation_deg": [
+        0.57,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "rock"
+      ]
+    },
+    {
+      "id": "rock_cluster_b_001",
+      "asset": "asset_rock_cluster_b",
+      "zone": "zone_kyobashi",
+      "position": [
+        5.204,
+        -2.424,
+        -0.1
+      ],
+      "rotation_deg": [
+        0.787,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "rock"
+      ]
+    },
+    {
+      "id": "rock_cluster_a_002",
+      "asset": "asset_rock_cluster_a",
+      "zone": "zone_kyobashi",
+      "position": [
+        -4.585,
+        4.005,
+        -0.1
+      ],
+      "rotation_deg": [
+        0.318,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "rock"
+      ]
+    },
+    {
+      "id": "rock_cluster_b_002",
+      "asset": "asset_rock_cluster_b",
+      "zone": "zone_kyobashi",
+      "position": [
+        5.435,
+        3.52,
+        -0.1
+      ],
+      "rotation_deg": [
+        0.655,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "rock"
+      ]
+    },
+    {
+      "id": "rock_cluster_a_003",
+      "asset": "asset_rock_cluster_a",
+      "zone": "zone_kyobashi",
+      "position": [
+        0.17,
+        -6.126,
+        -0.1
+      ],
+      "rotation_deg": [
+        0.101,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "rock"
+      ]
+    },
+    {
+      "id": "sakura_tree_large_001",
+      "asset": "asset_sakura_tree_large",
+      "zone": "zone_kyobashi",
+      "position": [
+        6.487,
+        -0.196,
+        -0.1
+      ],
+      "rotation_deg": [
+        -1.033,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "sakura_ring"
+      ]
+    },
+    {
+      "id": "sakura_tree_mid_003",
+      "asset": "asset_sakura_tree_mid",
+      "zone": "zone_kyobashi",
+      "position": [
+        4.569,
+        4.532,
+        -0.1
+      ],
+      "rotation_deg": [
+        -0.67,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "sakura_ring"
+      ]
+    },
+    {
+      "id": "sakura_tree_large_002",
+      "asset": "asset_sakura_tree_large",
+      "zone": "zone_kyobashi",
+      "position": [
+        0.074,
+        6.216,
+        -0.1
+      ],
+      "rotation_deg": [
+        0.622,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "sakura_ring"
+      ]
+    },
+    {
+      "id": "sakura_tree_mid_004",
+      "asset": "asset_sakura_tree_mid",
+      "zone": "zone_kyobashi",
+      "position": [
+        -4.657,
+        4.266,
+        -0.1
+      ],
+      "rotation_deg": [
+        0.207,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "sakura_ring"
+      ]
+    },
+    {
+      "id": "sakura_tree_large_003",
+      "asset": "asset_sakura_tree_large",
+      "zone": "zone_kyobashi",
+      "position": [
+        -6.311,
+        -0.202,
+        -0.1
+      ],
+      "rotation_deg": [
+        1.042,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "sakura_ring"
+      ]
+    },
+    {
+      "id": "sakura_tree_mid_005",
+      "asset": "asset_sakura_tree_mid",
+      "zone": "zone_kyobashi",
+      "position": [
+        -4.586,
+        -4.761,
+        -0.1
+      ],
+      "rotation_deg": [
+        1.044,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "sakura_ring"
+      ]
+    },
+    {
+      "id": "sakura_tree_large_004",
+      "asset": "asset_sakura_tree_large",
+      "zone": "zone_kyobashi",
+      "position": [
+        -0.172,
+        -6.339,
+        -0.1
+      ],
+      "rotation_deg": [
+        0.782,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "sakura_ring"
+      ]
+    },
+    {
+      "id": "sakura_tree_mid_006",
+      "asset": "asset_sakura_tree_mid",
+      "zone": "zone_kyobashi",
+      "position": [
+        4.75,
+        -4.762,
+        -0.1
+      ],
+      "rotation_deg": [
+        0.746,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "sakura_ring"
+      ]
+    },
+    {
+      "id": "chozubachi_001",
+      "asset": "asset_chozubachi",
+      "zone": "zone_kyobashi",
+      "position": [
+        1.5,
+        5.5,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "decor"
+      ]
+    },
+    {
+      "id": "grass_tuft_001",
+      "asset": "asset_grass_tuft",
+      "zone": "zone_kyobashi",
+      "position": [
+        -4.862,
+        -4.044,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "grass"
+      ]
+    },
+    {
+      "id": "grass_tuft_002",
+      "asset": "asset_grass_tuft",
+      "zone": "zone_kyobashi",
+      "position": [
+        -5.729,
+        0.882,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "grass"
+      ]
+    },
+    {
+      "id": "grass_tuft_003",
+      "asset": "asset_grass_tuft",
+      "zone": "zone_kyobashi",
+      "position": [
+        -1.813,
+        5.509,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "grass"
+      ]
+    },
+    {
+      "id": "grass_tuft_004",
+      "asset": "asset_grass_tuft",
+      "zone": "zone_kyobashi",
+      "position": [
+        -3.008,
+        4.075,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "grass"
+      ]
+    },
+    {
+      "id": "grass_tuft_005",
+      "asset": "asset_grass_tuft",
+      "zone": "zone_kyobashi",
+      "position": [
+        -6.614,
+        0.594,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "grass"
+      ]
+    },
+    {
+      "id": "grass_tuft_006",
+      "asset": "asset_grass_tuft",
+      "zone": "zone_kyobashi",
+      "position": [
+        3.265,
+        5.741,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "grass"
+      ]
+    },
+    {
+      "id": "azumaya_001",
+      "asset": "asset_azumaya",
+      "zone": "zone_azumaya",
+      "position": [
+        11.0,
+        3.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "box",
+      "destructible": false,
+      "tags": [
+        "building",
+        "save_point",
+        "viewpoint"
+      ]
+    },
+    {
+      "id": "sakura_tree_large_005",
+      "asset": "asset_sakura_tree_large",
+      "zone": "zone_azumaya",
+      "position": [
+        6.825,
+        6.015,
+        0.0
+      ],
+      "rotation_deg": [
+        0.069,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "sakura"
+      ]
+    },
+    {
+      "id": "sakura_tree_large_006",
+      "asset": "asset_sakura_tree_large",
+      "zone": "zone_azumaya",
+      "position": [
+        14.474,
+        5.418,
+        0.0
+      ],
+      "rotation_deg": [
+        -0.88,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "sakura"
+      ]
+    },
+    {
+      "id": "sakura_tree_large_007",
+      "asset": "asset_sakura_tree_large",
+      "zone": "zone_azumaya",
+      "position": [
+        13.536,
+        -0.273,
+        0.0
+      ],
+      "rotation_deg": [
+        0.303,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "sakura"
+      ]
+    },
+    {
+      "id": "sakura_tree_large_008",
+      "asset": "asset_sakura_tree_large",
+      "zone": "zone_azumaya",
+      "position": [
+        7.459,
+        0.186,
+        0.0
+      ],
+      "rotation_deg": [
+        -0.286,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "sakura"
+      ]
+    },
+    {
+      "id": "ishidoro_tall_009",
+      "asset": "asset_ishidoro_tall",
+      "zone": "zone_azumaya",
+      "position": [
+        8.4,
+        -1.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": true,
+      "tags": [
+        "lantern",
+        "lightable"
+      ]
+    },
+    {
+      "id": "ishidoro_tall_010",
+      "asset": "asset_ishidoro_tall",
+      "zone": "zone_azumaya",
+      "position": [
+        13.6,
+        -1.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": true,
+      "tags": [
+        "lantern",
+        "lightable"
+      ]
+    },
+    {
+      "id": "sakura_solo_001",
+      "asset": "asset_sakura_solo",
+      "zone": "zone_azumaya",
+      "position": [
+        13.0,
+        8.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "solo_sakura",
+        "taikei"
+      ]
+    },
+    {
+      "id": "bush_round_004",
+      "asset": "asset_bush_round",
+      "zone": "zone_azumaya",
+      "position": [
+        8.0,
+        1.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "decor"
+      ]
+    },
+    {
+      "id": "bush_round_005",
+      "asset": "asset_bush_round",
+      "zone": "zone_azumaya",
+      "position": [
+        14.0,
+        2.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "decor"
+      ]
+    },
+    {
+      "id": "moss_patch_002",
+      "asset": "asset_moss_patch",
+      "zone": "zone_azumaya",
+      "position": [
+        9.5,
+        4.5,
+        0.46
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "decor"
+      ]
+    },
+    {
+      "id": "karesansui_frame_001",
+      "asset": "asset_karesansui_frame",
+      "zone": "zone_karesansui",
+      "position": [
+        -13.0,
+        -3.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "box",
+      "destructible": false,
+      "tags": [
+        "karesansui",
+        "landmark"
+      ]
+    },
+    {
+      "id": "pine_black_001",
+      "asset": "asset_pine_black",
+      "zone": "zone_karesansui",
+      "position": [
+        -17.541,
+        -6.453,
+        0.0
+      ],
+      "rotation_deg": [
+        0.575,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "pine"
+      ]
+    },
+    {
+      "id": "pine_black_002",
+      "asset": "asset_pine_black",
+      "zone": "zone_karesansui",
+      "position": [
+        -8.563,
+        -6.069,
+        0.0
+      ],
+      "rotation_deg": [
+        0.434,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "pine"
+      ]
+    },
+    {
+      "id": "pine_black_003",
+      "asset": "asset_pine_black",
+      "zone": "zone_karesansui",
+      "position": [
+        -16.883,
+        0.624,
+        0.0
+      ],
+      "rotation_deg": [
+        -0.308,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "pine"
+      ]
+    },
+    {
+      "id": "ishidoro_short_001",
+      "asset": "asset_ishidoro_short",
+      "zone": "zone_karesansui",
+      "position": [
+        -9.0,
+        -1.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": true,
+      "tags": [
+        "lantern",
+        "lightable"
+      ]
+    },
+    {
+      "id": "ishidoro_short_002",
+      "asset": "asset_ishidoro_short",
+      "zone": "zone_karesansui",
+      "position": [
+        -16.5,
+        -2.5,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": true,
+      "tags": [
+        "lantern",
+        "lightable"
+      ]
+    },
+    {
+      "id": "chozubachi_002",
+      "asset": "asset_chozubachi",
+      "zone": "zone_karesansui",
+      "position": [
+        -8.0,
+        0.5,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "decor"
+      ]
+    },
+    {
+      "id": "rock_single_001",
+      "asset": "asset_rock_single",
+      "zone": "zone_karesansui",
+      "position": [
+        -11.035,
+        -7.127,
+        0.0
+      ],
+      "rotation_deg": [
+        -0.24,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "rock"
+      ]
+    },
+    {
+      "id": "moss_patch_003",
+      "asset": "asset_moss_patch",
+      "zone": "zone_karesansui",
+      "position": [
+        -14.0,
+        1.0,
+        0.01
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "decor"
+      ]
+    },
+    {
+      "id": "moss_patch_004",
+      "asset": "asset_moss_patch",
+      "zone": "zone_karesansui",
+      "position": [
+        -12.5,
+        1.0,
+        0.01
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "decor"
+      ]
+    },
+    {
+      "id": "moss_patch_005",
+      "asset": "asset_moss_patch",
+      "zone": "zone_karesansui",
+      "position": [
+        -11.0,
+        1.0,
+        0.01
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "decor"
+      ]
+    },
+    {
+      "id": "ishidoro_tall_011",
+      "asset": "asset_ishidoro_tall",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -7.4,
+        6.0,
+        0.3
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": true,
+      "tags": [
+        "lantern",
+        "lightable",
+        "quest_lantern_lighting"
+      ]
+    },
+    {
+      "id": "ishidoro_tall_012",
+      "asset": "asset_ishidoro_tall",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -4.6,
+        7.8,
+        0.3
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": true,
+      "tags": [
+        "lantern",
+        "lightable",
+        "quest_lantern_lighting"
+      ]
+    },
+    {
+      "id": "ishidoro_short_003",
+      "asset": "asset_ishidoro_short",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -7.4,
+        9.6,
+        0.3
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": true,
+      "tags": [
+        "lantern",
+        "lightable",
+        "quest_lantern_lighting"
+      ]
+    },
+    {
+      "id": "ishidoro_tall_013",
+      "asset": "asset_ishidoro_tall",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -4.6,
+        11.4,
+        0.3
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": true,
+      "tags": [
+        "lantern",
+        "lightable",
+        "quest_lantern_lighting"
+      ]
+    },
+    {
+      "id": "ishidoro_tall_014",
+      "asset": "asset_ishidoro_tall",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -7.4,
+        13.2,
+        0.3
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": true,
+      "tags": [
+        "lantern",
+        "lightable",
+        "quest_lantern_lighting"
+      ]
+    },
+    {
+      "id": "ishidoro_short_004",
+      "asset": "asset_ishidoro_short",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -4.6,
+        15.0,
+        0.3
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": true,
+      "tags": [
+        "lantern",
+        "lightable",
+        "quest_lantern_lighting"
+      ]
+    },
+    {
+      "id": "ishidoro_tall_015",
+      "asset": "asset_ishidoro_tall",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -7.4,
+        16.8,
+        0.3
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": true,
+      "tags": [
+        "lantern",
+        "lightable",
+        "quest_lantern_lighting"
+      ]
+    },
+    {
+      "id": "ishidoro_tall_016",
+      "asset": "asset_ishidoro_tall",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -4.6,
+        18.6,
+        0.3
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": true,
+      "tags": [
+        "lantern",
+        "lightable",
+        "quest_lantern_lighting"
+      ]
+    },
+    {
+      "id": "stepping_stone_001",
+      "asset": "asset_stepping_stone",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -6.3,
+        6.0,
+        0.3
+      ],
+      "rotation_deg": [
+        8.54,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "path"
+      ]
+    },
+    {
+      "id": "stepping_stone_002",
+      "asset": "asset_stepping_stone",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -5.7,
+        7.8,
+        0.3
+      ],
+      "rotation_deg": [
+        12.357,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "path"
+      ]
+    },
+    {
+      "id": "stepping_stone_003",
+      "asset": "asset_stepping_stone",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -6.3,
+        9.6,
+        0.3
+      ],
+      "rotation_deg": [
+        6.443,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "path"
+      ]
+    },
+    {
+      "id": "stepping_stone_004",
+      "asset": "asset_stepping_stone",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -5.7,
+        11.4,
+        0.3
+      ],
+      "rotation_deg": [
+        8.572,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "path"
+      ]
+    },
+    {
+      "id": "stepping_stone_005",
+      "asset": "asset_stepping_stone",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -6.3,
+        13.2,
+        0.3
+      ],
+      "rotation_deg": [
+        -2.342,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "path"
+      ]
+    },
+    {
+      "id": "stepping_stone_006",
+      "asset": "asset_stepping_stone",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -5.7,
+        15.0,
+        0.3
+      ],
+      "rotation_deg": [
+        -0.199,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "path"
+      ]
+    },
+    {
+      "id": "stepping_stone_007",
+      "asset": "asset_stepping_stone",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -6.3,
+        16.8,
+        0.3
+      ],
+      "rotation_deg": [
+        -6.339,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "path"
+      ]
+    },
+    {
+      "id": "stepping_stone_008",
+      "asset": "asset_stepping_stone",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -5.7,
+        18.6,
+        0.3
+      ],
+      "rotation_deg": [
+        5.563,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "path"
+      ]
+    },
+    {
+      "id": "bamboo_cluster_011",
+      "asset": "asset_bamboo_cluster",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -3.522,
+        5.914,
+        0.3
+      ],
+      "rotation_deg": [
+        -0.49,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "bamboo",
+        "boundary"
+      ]
+    },
+    {
+      "id": "bamboo_cluster_012",
+      "asset": "asset_bamboo_cluster",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -8.65,
+        7.614,
+        0.3
+      ],
+      "rotation_deg": [
+        -0.421,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "bamboo",
+        "boundary"
+      ]
+    },
+    {
+      "id": "bamboo_cluster_013",
+      "asset": "asset_bamboo_cluster",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -3.543,
+        9.783,
+        0.3
+      ],
+      "rotation_deg": [
+        -0.071,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "bamboo",
+        "boundary"
+      ]
+    },
+    {
+      "id": "bamboo_cluster_014",
+      "asset": "asset_bamboo_cluster",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -8.482,
+        11.593,
+        0.3
+      ],
+      "rotation_deg": [
+        -0.548,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "bamboo",
+        "boundary"
+      ]
+    },
+    {
+      "id": "bamboo_cluster_015",
+      "asset": "asset_bamboo_cluster",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -3.397,
+        13.291,
+        0.3
+      ],
+      "rotation_deg": [
+        0.692,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "bamboo",
+        "boundary"
+      ]
+    },
+    {
+      "id": "bamboo_cluster_016",
+      "asset": "asset_bamboo_cluster",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -8.658,
+        15.001,
+        0.3
+      ],
+      "rotation_deg": [
+        0.058,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "bamboo",
+        "boundary"
+      ]
+    },
+    {
+      "id": "bamboo_cluster_017",
+      "asset": "asset_bamboo_cluster",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -3.372,
+        16.844,
+        0.3
+      ],
+      "rotation_deg": [
+        0.641,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "bamboo",
+        "boundary"
+      ]
+    },
+    {
+      "id": "bamboo_cluster_018",
+      "asset": "asset_bamboo_cluster",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -8.73,
+        18.737,
+        0.3
+      ],
+      "rotation_deg": [
+        -0.66,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "bamboo",
+        "boundary"
+      ]
+    },
+    {
+      "id": "sakura_tree_mid_007",
+      "asset": "asset_sakura_tree_mid",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -9.194,
+        7.002,
+        0.3
+      ],
+      "rotation_deg": [
+        -0.056,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "sakura"
+      ]
+    },
+    {
+      "id": "sakura_tree_mid_008",
+      "asset": "asset_sakura_tree_mid",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -2.955,
+        8.936,
+        0.3
+      ],
+      "rotation_deg": [
+        -0.312,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "sakura"
+      ]
+    },
+    {
+      "id": "sakura_tree_mid_009",
+      "asset": "asset_sakura_tree_mid",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -9.52,
+        13.18,
+        0.3
+      ],
+      "rotation_deg": [
+        0.36,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "sakura"
+      ]
+    },
+    {
+      "id": "sakura_solo_002",
+      "asset": "asset_sakura_solo",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -3.0,
+        17.0,
+        0.3
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "solo_sakura",
+        "taikei"
+      ]
+    },
+    {
+      "id": "sakura_tree_large_009",
+      "asset": "asset_sakura_tree_large",
+      "zone": "zone_sakura_grove",
+      "position": [
+        9.461,
+        14.246,
+        0.6
+      ],
+      "rotation_deg": [
+        0.442,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "grove"
+      ]
+    },
+    {
+      "id": "sakura_tree_large_010",
+      "asset": "asset_sakura_tree_large",
+      "zone": "zone_sakura_grove",
+      "position": [
+        7.191,
+        17.341,
+        0.6
+      ],
+      "rotation_deg": [
+        1.001,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "grove"
+      ]
+    },
+    {
+      "id": "sakura_tree_large_011",
+      "asset": "asset_sakura_tree_large",
+      "zone": "zone_sakura_grove",
+      "position": [
+        4.116,
+        19.732,
+        0.6
+      ],
+      "rotation_deg": [
+        -1.012,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "grove"
+      ]
+    },
+    {
+      "id": "sakura_tree_large_012",
+      "asset": "asset_sakura_tree_large",
+      "zone": "zone_sakura_grove",
+      "position": [
+        0.617,
+        18.407,
+        0.6
+      ],
+      "rotation_deg": [
+        0.678,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "grove"
+      ]
+    },
+    {
+      "id": "sakura_tree_large_013",
+      "asset": "asset_sakura_tree_large",
+      "zone": "zone_sakura_grove",
+      "position": [
+        -1.652,
+        15.566,
+        0.6
+      ],
+      "rotation_deg": [
+        -0.494,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "grove"
+      ]
+    },
+    {
+      "id": "sakura_tree_large_014",
+      "asset": "asset_sakura_tree_large",
+      "zone": "zone_sakura_grove",
+      "position": [
+        -1.734,
+        12.194,
+        0.6
+      ],
+      "rotation_deg": [
+        -0.236,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "grove"
+      ]
+    },
+    {
+      "id": "sakura_tree_large_015",
+      "asset": "asset_sakura_tree_large",
+      "zone": "zone_sakura_grove",
+      "position": [
+        0.078,
+        8.631,
+        0.6
+      ],
+      "rotation_deg": [
+        -0.233,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "grove"
+      ]
+    },
+    {
+      "id": "sakura_tree_large_016",
+      "asset": "asset_sakura_tree_large",
+      "zone": "zone_sakura_grove",
+      "position": [
+        4.35,
+        7.484,
+        0.6
+      ],
+      "rotation_deg": [
+        0.11,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "grove"
+      ]
+    },
+    {
+      "id": "sakura_tree_large_017",
+      "asset": "asset_sakura_tree_large",
+      "zone": "zone_sakura_grove",
+      "position": [
+        6.828,
+        10.399,
+        0.6
+      ],
+      "rotation_deg": [
+        -0.599,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "grove"
+      ]
+    },
+    {
+      "id": "sakura_solo_003",
+      "asset": "asset_sakura_solo",
+      "zone": "zone_sakura_grove",
+      "position": [
+        3.0,
+        14.0,
+        0.6
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "center_sakura"
+      ]
+    },
+    {
+      "id": "calling_stone_001",
+      "asset": "asset_calling_stone",
+      "zone": "zone_sakura_grove",
+      "position": [
+        1.0,
+        12.0,
+        0.6
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "calling_stone",
+        "switch_anchor"
+      ]
+    },
+    {
+      "id": "calling_stone_002",
+      "asset": "asset_calling_stone",
+      "zone": "zone_sakura_grove",
+      "position": [
+        5.0,
+        12.5,
+        0.6
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "calling_stone",
+        "switch_anchor"
+      ]
+    },
+    {
+      "id": "calling_stone_003",
+      "asset": "asset_calling_stone",
+      "zone": "zone_sakura_grove",
+      "position": [
+        3.0,
+        17.0,
+        0.6
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "calling_stone",
+        "switch_anchor"
+      ]
+    },
+    {
+      "id": "rock_cluster_a_004",
+      "asset": "asset_rock_cluster_a",
+      "zone": "zone_sakura_grove",
+      "position": [
+        0.439,
+        15.863,
+        0.6
+      ],
+      "rotation_deg": [
+        0.103,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "rock"
+      ]
+    },
+    {
+      "id": "rock_cluster_a_005",
+      "asset": "asset_rock_cluster_a",
+      "zone": "zone_sakura_grove",
+      "position": [
+        5.332,
+        16.625,
+        0.6
+      ],
+      "rotation_deg": [
+        0.049,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "rock"
+      ]
+    },
+    {
+      "id": "rock_cluster_a_006",
+      "asset": "asset_rock_cluster_a",
+      "zone": "zone_sakura_grove",
+      "position": [
+        5.9,
+        11.508,
+        0.6
+      ],
+      "rotation_deg": [
+        0.016,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "rock"
+      ]
+    },
+    {
+      "id": "grass_tuft_007",
+      "asset": "asset_grass_tuft",
+      "zone": "zone_sakura_grove",
+      "position": [
+        7.609,
+        12.529,
+        0.6
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "grass"
+      ]
+    },
+    {
+      "id": "grass_tuft_008",
+      "asset": "asset_grass_tuft",
+      "zone": "zone_sakura_grove",
+      "position": [
+        -0.77,
+        18.536,
+        0.6
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "grass"
+      ]
+    },
+    {
+      "id": "grass_tuft_009",
+      "asset": "asset_grass_tuft",
+      "zone": "zone_sakura_grove",
+      "position": [
+        6.742,
+        18.652,
+        0.6
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "grass"
+      ]
+    },
+    {
+      "id": "grass_tuft_010",
+      "asset": "asset_grass_tuft",
+      "zone": "zone_sakura_grove",
+      "position": [
+        6.231,
+        13.127,
+        0.6
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "grass"
+      ]
+    },
+    {
+      "id": "grass_tuft_011",
+      "asset": "asset_grass_tuft",
+      "zone": "zone_sakura_grove",
+      "position": [
+        1.072,
+        10.908,
+        0.6
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "grass"
+      ]
+    },
+    {
+      "id": "grass_tuft_012",
+      "asset": "asset_grass_tuft",
+      "zone": "zone_sakura_grove",
+      "position": [
+        2.563,
+        11.162,
+        0.6
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "grass"
+      ]
+    },
+    {
+      "id": "grass_tuft_013",
+      "asset": "asset_grass_tuft",
+      "zone": "zone_sakura_grove",
+      "position": [
+        2.826,
+        16.064,
+        0.6
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "grass"
+      ]
+    },
+    {
+      "id": "grass_tuft_014",
+      "asset": "asset_grass_tuft",
+      "zone": "zone_sakura_grove",
+      "position": [
+        6.476,
+        16.868,
+        0.6
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "grass"
+      ]
+    },
+    {
+      "id": "torii_small_001",
+      "asset": "asset_torii_small",
+      "zone": "zone_okunomori",
+      "position": [
+        -2.0,
+        22.0,
+        1.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "box",
+      "destructible": false,
+      "tags": [
+        "boundary",
+        "danger_gate"
+      ]
+    },
+    {
+      "id": "pine_black_004",
+      "asset": "asset_pine_black",
+      "zone": "zone_okunomori",
+      "position": [
+        3.499,
+        28.004,
+        1.2
+      ],
+      "rotation_deg": [
+        -1.147,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "pine",
+        "cold"
+      ]
+    },
+    {
+      "id": "pine_black_005",
+      "asset": "asset_pine_black",
+      "zone": "zone_okunomori",
+      "position": [
+        1.403,
+        32.368,
+        1.2
+      ],
+      "rotation_deg": [
+        -0.517,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "pine",
+        "cold"
+      ]
+    },
+    {
+      "id": "pine_black_006",
+      "asset": "asset_pine_black",
+      "zone": "zone_okunomori",
+      "position": [
+        -3.62,
+        34.187,
+        1.2
+      ],
+      "rotation_deg": [
+        0.007,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "pine",
+        "cold"
+      ]
+    },
+    {
+      "id": "pine_black_007",
+      "asset": "asset_pine_black",
+      "zone": "zone_okunomori",
+      "position": [
+        -8.168,
+        31.101,
+        1.2
+      ],
+      "rotation_deg": [
+        0.069,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "pine",
+        "cold"
+      ]
+    },
+    {
+      "id": "pine_black_008",
+      "asset": "asset_pine_black",
+      "zone": "zone_okunomori",
+      "position": [
+        -7.07,
+        25.922,
+        1.2
+      ],
+      "rotation_deg": [
+        -0.772,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "pine",
+        "cold"
+      ]
+    },
+    {
+      "id": "pine_black_009",
+      "asset": "asset_pine_black",
+      "zone": "zone_okunomori",
+      "position": [
+        -3.677,
+        22.2,
+        1.2
+      ],
+      "rotation_deg": [
+        0.257,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "pine",
+        "cold"
+      ]
+    },
+    {
+      "id": "pine_black_010",
+      "asset": "asset_pine_black",
+      "zone": "zone_okunomori",
+      "position": [
+        1.383,
+        22.688,
+        1.2
+      ],
+      "rotation_deg": [
+        -0.818,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "pine",
+        "cold"
+      ]
+    },
+    {
+      "id": "pine_black_011",
+      "asset": "asset_pine_black",
+      "zone": "zone_okunomori",
+      "position": [
+        3.727,
+        27.418,
+        1.2
+      ],
+      "rotation_deg": [
+        -1.054,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "pine",
+        "cold"
+      ]
+    },
+    {
+      "id": "sakura_tree_small_002",
+      "asset": "asset_sakura_tree_small",
+      "zone": "zone_okunomori",
+      "position": [
+        -5.0,
+        30.0,
+        1.2
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "withering"
+      ]
+    },
+    {
+      "id": "rock_cluster_b_003",
+      "asset": "asset_rock_cluster_b",
+      "zone": "zone_okunomori",
+      "position": [
+        -2.0,
+        28.0,
+        1.15
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.3,
+        1.3,
+        1.3
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "boss_platform"
+      ]
+    },
+    {
+      "id": "calling_stone_004",
+      "asset": "asset_calling_stone",
+      "zone": "zone_okunomori",
+      "position": [
+        -4.0,
+        26.0,
+        1.2
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "calling_stone",
+        "switch_anchor"
+      ]
+    },
+    {
+      "id": "calling_stone_005",
+      "asset": "asset_calling_stone",
+      "zone": "zone_okunomori",
+      "position": [
+        0.5,
+        26.5,
+        1.2
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "calling_stone",
+        "switch_anchor"
+      ]
+    },
+    {
+      "id": "calling_stone_006",
+      "asset": "asset_calling_stone",
+      "zone": "zone_okunomori",
+      "position": [
+        -2.0,
+        31.0,
+        1.2
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "calling_stone",
+        "switch_anchor"
+      ]
+    },
+    {
+      "id": "ishidoro_tall_017",
+      "asset": "asset_ishidoro_tall",
+      "zone": "zone_okunomori",
+      "position": [
+        -5.5,
+        24.0,
+        1.1
+      ],
+      "rotation_deg": [
+        18.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": true,
+      "tags": [
+        "lantern",
+        "ruined"
+      ]
+    },
+    {
+      "id": "rock_single_002",
+      "asset": "asset_rock_single",
+      "zone": "zone_okunomori",
+      "position": [
+        1.604,
+        30.599,
+        1.2
+      ],
+      "rotation_deg": [
+        0.436,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "rock"
+      ]
+    },
+    {
+      "id": "rock_single_003",
+      "asset": "asset_rock_single",
+      "zone": "zone_okunomori",
+      "position": [
+        -4.955,
+        27.009,
+        1.2
+      ],
+      "rotation_deg": [
+        -0.038,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "cylinder",
+      "destructible": false,
+      "tags": [
+        "rock"
+      ]
+    },
+    {
+      "id": "sky_dome_001",
+      "asset": "asset_sky_dome",
+      "zone": "zone_kyobashi",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "sky",
+        "global"
+      ]
+    },
+    {
+      "id": "fog_plane_001",
+      "asset": "asset_fog_plane",
+      "zone": "zone_azumaya",
+      "position": [
+        30.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "fog",
+        "boundary"
+      ]
+    },
+    {
+      "id": "fog_plane_002",
+      "asset": "asset_fog_plane",
+      "zone": "zone_sakura_grove",
+      "position": [
+        21.213,
+        21.213,
+        0.0
+      ],
+      "rotation_deg": [
+        45.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "fog",
+        "boundary"
+      ]
+    },
+    {
+      "id": "fog_plane_003",
+      "asset": "asset_fog_plane",
+      "zone": "zone_okunomori",
+      "position": [
+        0.0,
+        30.0,
+        0.0
+      ],
+      "rotation_deg": [
+        90.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "fog",
+        "boundary"
+      ]
+    },
+    {
+      "id": "fog_plane_004",
+      "asset": "asset_fog_plane",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -21.213,
+        21.213,
+        0.0
+      ],
+      "rotation_deg": [
+        135.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "fog",
+        "boundary"
+      ]
+    },
+    {
+      "id": "fog_plane_005",
+      "asset": "asset_fog_plane",
+      "zone": "zone_karesansui",
+      "position": [
+        -30.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        180.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "fog",
+        "boundary"
+      ]
+    },
+    {
+      "id": "fog_plane_006",
+      "asset": "asset_fog_plane",
+      "zone": "zone_tea_stall",
+      "position": [
+        -21.213,
+        -21.213,
+        0.0
+      ],
+      "rotation_deg": [
+        225.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "fog",
+        "boundary"
+      ]
+    },
+    {
+      "id": "fog_plane_007",
+      "asset": "asset_fog_plane",
+      "zone": "zone_torii_approach",
+      "position": [
+        -0.0,
+        -30.0,
+        0.0
+      ],
+      "rotation_deg": [
+        270.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "fog",
+        "boundary"
+      ]
+    },
+    {
+      "id": "fog_plane_008",
+      "asset": "asset_fog_plane",
+      "zone": "zone_torii_approach",
+      "position": [
+        21.213,
+        -21.213,
+        0.0
+      ],
+      "rotation_deg": [
+        315.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": "none",
+      "destructible": false,
+      "tags": [
+        "fog",
+        "boundary"
+      ]
+    }
+  ],
+  "lights": [
+    {
+      "id": "sun_main",
+      "type": "directional",
+      "rotation_deg": [
+        -52.0,
+        0.0,
+        38.0
+      ],
+      "color": [
+        1.0,
+        0.95,
+        0.88
+      ],
+      "energy": 1.15,
+      "shadow": true,
+      "shadow_resolution": 2048,
+      "note": "午后偏西主光；安全区暖调"
+    },
+    {
+      "id": "sun_okunomori_fill",
+      "type": "directional",
+      "rotation_deg": [
+        -48.0,
+        0.0,
+        200.0
+      ],
+      "color": [
+        0.62,
+        0.7,
+        0.8
+      ],
+      "energy": 0.55,
+      "shadow": false,
+      "shadow_resolution": 0,
+      "note": "奥之森冷调补光，仅照亮 zone_okunomori/grove"
+    },
+    {
+      "id": "ambient_sky",
+      "type": "ambient",
+      "color": [
+        0.72,
+        0.74,
+        0.8
+      ],
+      "energy": 0.35,
+      "note": "天空环境光"
+    },
+    {
+      "id": "lantern_glow_pool",
+      "type": "omni_group",
+      "color": [
+        0.96,
+        0.85,
+        0.66
+      ],
+      "energy": 0.9,
+      "radius": 1.5,
+      "count_limit": 6,
+      "note": "石灯笼假光源：仅最近的 6 盏启用 OmniLight，其余靠自发光材质（见 01 §2.3）"
+    }
+  ],
+  "npc_placements": [
+    {
+      "id": "npc_mino",
+      "name_cn": "三乃",
+      "role": "tea_stall",
+      "zone": "zone_tea_stall",
+      "position": [
+        -7.0,
+        -13.6,
+        0.0
+      ],
+      "rotation_deg": 10.0,
+      "asset": "asset_npc_base",
+      "variant": "mino",
+      "interactable": true,
+      "note": "茶摊少女，商店；idle/talk/wave"
+    },
+    {
+      "id": "npc_tsubaki",
+      "name_cn": "椿",
+      "role": "shrine_maiden",
+      "zone": "zone_azumaya",
+      "position": [
+        11.0,
+        3.0,
+        0.45
+      ],
+      "rotation_deg": 180.0,
+      "asset": "asset_npc_base",
+      "variant": "tsubaki",
+      "interactable": true,
+      "note": "巫女，存档点+记录结晶；idle/bow/talk"
+    },
+    {
+      "id": "npc_genzo",
+      "name_cn": "源藏",
+      "role": "stonemason",
+      "zone": "zone_karesansui",
+      "position": [
+        -16.0,
+        -3.0,
+        0.0
+      ],
+      "rotation_deg": 90.0,
+      "asset": "asset_npc_base",
+      "variant": "genzo",
+      "interactable": true,
+      "note": "石匠，装备强化+支线；sit/idle/talk；坐于缘侧凿石"
+    },
+    {
+      "id": "npc_kaede",
+      "name_cn": "枫",
+      "role": "garden_guard",
+      "zone": "zone_ishidoro_path",
+      "position": [
+        -6.0,
+        12.0,
+        0.3
+      ],
+      "rotation_deg": 0.0,
+      "asset": "asset_npc_base",
+      "variant": "kaede",
+      "interactable": true,
+      "note": "樱守，巡逻+支线'点亮七盏石灯笼'；walk/idle/talk；手提灯笼"
+    },
+    {
+      "id": "npc_busho",
+      "name_cn": "绯甲武者",
+      "role": "area_guardian",
+      "zone": "zone_okunomori",
+      "position": [
+        -2.0,
+        28.0,
+        1.35
+      ],
+      "rotation_deg": 180.0,
+      "asset": "asset_enemy_hikabusho",
+      "variant": "busho",
+      "interactable": true,
+      "hostile": true,
+      "note": "奥之森守卫，敌对但战前可对话；guard/idle/attack"
+    }
+  ],
+  "spawners": [
+    {
+      "id": "spawn_grove_oni_grunt",
+      "zone": "zone_sakura_grove",
+      "enemy": "enemy_sakura_oni_grunt",
+      "count": 3,
+      "respawn_sec": 90,
+      "max_alive": 3,
+      "positions": [
+        [
+          1.5,
+          13.0,
+          0.6
+        ],
+        [
+          4.5,
+          15.0,
+          0.6
+        ],
+        [
+          2.5,
+          16.5,
+          0.6
+        ]
+      ],
+      "first_entry_fixed": true,
+      "note": "首次进入固定刷新（教学战）"
+    },
+    {
+      "id": "spawn_grove_oni_blade",
+      "zone": "zone_sakura_grove",
+      "enemy": "enemy_sakura_oni_blade",
+      "count": 1,
+      "respawn_sec": 120,
+      "max_alive": 1,
+      "positions": [
+        [
+          3.0,
+          12.0,
+          0.6
+        ]
+      ],
+      "unlock_condition": "player_level>=5",
+      "note": "玩家 5 级后加入刷新池"
+    },
+    {
+      "id": "spawn_okunomori_busho",
+      "zone": "zone_okunomori",
+      "enemy": "enemy_hikabuto_busho",
+      "count": 1,
+      "respawn_sec": 300,
+      "max_alive": 1,
+      "positions": [
+        [
+          -2.0,
+          28.0,
+          1.35
+        ]
+      ],
+      "note": "区域守卫，击杀后 5 分钟重刷"
+    },
+    {
+      "id": "spawn_okunomori_oni_blade",
+      "zone": "zone_okunomori",
+      "enemy": "enemy_sakura_oni_blade",
+      "count": 2,
+      "respawn_sec": 150,
+      "max_alive": 2,
+      "positions": [
+        [
+          -4.0,
+          27.0,
+          1.2
+        ],
+        [
+          0.5,
+          29.0,
+          1.2
+        ]
+      ],
+      "linked_to": "spawn_okunomori_busho",
+      "note": "与绯甲武者同时激活"
+    }
+  ],
+  "spawn_points": [
+    {
+      "id": "player_spawn_main",
+      "zone": "zone_torii_approach",
+      "position": [
+        0.0,
+        -20.0,
+        0.0
+      ],
+      "rotation_deg": 0.0,
+      "note": "主出生点，鸟居内、面朝北"
+    },
+    {
+      "id": "teleport_from_town",
+      "zone": "zone_torii_approach",
+      "position": [
+        0.0,
+        -21.0,
+        0.0
+      ],
+      "rotation_deg": 0.0,
+      "note": "起始之镇传送门落点"
+    }
+  ],
+  "volumes": [
+    {
+      "id": "vol_safe_torii",
+      "type": "safe_zone",
+      "zone": "zone_torii_approach",
+      "combat_enabled": false
+    },
+    {
+      "id": "vol_safe_tea",
+      "type": "safe_zone",
+      "zone": "zone_tea_stall",
+      "combat_enabled": false
+    },
+    {
+      "id": "vol_safe_kyobashi",
+      "type": "safe_zone",
+      "zone": "zone_kyobashi",
+      "combat_enabled": false
+    },
+    {
+      "id": "vol_safe_azumaya",
+      "type": "safe_zone",
+      "zone": "zone_azumaya",
+      "combat_enabled": false
+    },
+    {
+      "id": "vol_safe_karesansui",
+      "type": "safe_zone",
+      "zone": "zone_karesansui",
+      "combat_enabled": false
+    },
+    {
+      "id": "vol_combat_domain",
+      "type": "combat_domain",
+      "zones": [
+        "zone_ishidoro_path",
+        "zone_sakura_grove",
+        "zone_okunomori"
+      ],
+      "combat_enabled": true,
+      "note": "三交战区合并为单一 Combat Domain，切换距离按玩家实际坐标判定（见 02 §9）"
+    },
+    {
+      "id": "vol_boundary_fog",
+      "type": "fog",
+      "shape": "ring",
+      "inner_radius": 26.0,
+      "outer_radius": 34.0,
+      "density": 1.0,
+      "note": "边界雾，靠近 2m 内线性升浓；物理墙位于雾中"
+    },
+    {
+      "id": "vol_combat_music",
+      "type": "audio_trigger",
+      "zones": [
+        "zone_sakura_grove",
+        "zone_okunomori"
+      ],
+      "on_enter": "bgm_battle_start",
+      "on_exit": "bgm_battle_fadeout_6s"
+    },
+    {
+      "id": "vol_okunomori_cold",
+      "type": "color_grade_trigger",
+      "zone": "zone_okunomori",
+      "note": "进入奥之森色温转冷（α 阶段靠 sun_okunomori_fill 补光实现，不用后处理）"
+    }
+  ],
+  "petal_emitters": [
+    {
+      "id": "petal_zone_torii_approach",
+      "zone": "zone_torii_approach",
+      "shape": "box",
+      "center": [
+        0.0,
+        -17.0,
+        4.0
+      ],
+      "dimensions": [
+        4.0,
+        14.0,
+        8.0
+      ],
+      "density": 0.3,
+      "wind_deg": 180.0,
+      "lifetime_sec": [
+        6.0,
+        9.0
+      ],
+      "ground_fade_sec": 12.0,
+      "combat_suppress_factor": 0.4,
+      "note": "交战中密度×0.4，脱战 4s 恢复（见 02 §7）"
+    },
+    {
+      "id": "petal_zone_tea_stall",
+      "zone": "zone_tea_stall",
+      "shape": "box",
+      "center": [
+        -7.0,
+        -13.0,
+        4.0
+      ],
+      "dimensions": [
+        5.0,
+        6.0,
+        8.0
+      ],
+      "density": 0.4,
+      "wind_deg": 180.0,
+      "lifetime_sec": [
+        6.0,
+        9.0
+      ],
+      "ground_fade_sec": 12.0,
+      "combat_suppress_factor": 0.4,
+      "note": "交战中密度×0.4，脱战 4s 恢复（见 02 §7）"
+    },
+    {
+      "id": "petal_zone_kyobashi",
+      "zone": "zone_kyobashi",
+      "shape": "cylinder",
+      "center": [
+        0.0,
+        0.0,
+        3.7
+      ],
+      "dimensions": [
+        7.4,
+        7.4,
+        8.0
+      ],
+      "density": 1.0,
+      "wind_deg": 315.0,
+      "lifetime_sec": [
+        6.0,
+        9.0
+      ],
+      "ground_fade_sec": 12.0,
+      "combat_suppress_factor": 0.4,
+      "note": "交战中密度×0.4，脱战 4s 恢复（见 02 §7）"
+    },
+    {
+      "id": "petal_zone_azumaya",
+      "zone": "zone_azumaya",
+      "shape": "box",
+      "center": [
+        11.0,
+        3.0,
+        4.45
+      ],
+      "dimensions": [
+        7.0,
+        7.0,
+        8.0
+      ],
+      "density": 0.7,
+      "wind_deg": 315.0,
+      "lifetime_sec": [
+        6.0,
+        9.0
+      ],
+      "ground_fade_sec": 12.0,
+      "combat_suppress_factor": 0.4,
+      "note": "交战中密度×0.4，脱战 4s 恢复（见 02 §7）"
+    },
+    {
+      "id": "petal_zone_karesansui",
+      "zone": "zone_karesansui",
+      "shape": "box",
+      "center": [
+        -13.0,
+        -3.0,
+        4.0
+      ],
+      "dimensions": [
+        11.0,
+        10.0,
+        8.0
+      ],
+      "density": 0.5,
+      "wind_deg": 270.0,
+      "lifetime_sec": [
+        6.0,
+        9.0
+      ],
+      "ground_fade_sec": 12.0,
+      "combat_suppress_factor": 0.4,
+      "note": "交战中密度×0.4，脱战 4s 恢复（见 02 §7）"
+    },
+    {
+      "id": "petal_zone_ishidoro_path",
+      "zone": "zone_ishidoro_path",
+      "shape": "box",
+      "center": [
+        -6.0,
+        12.0,
+        4.3
+      ],
+      "dimensions": [
+        4.0,
+        13.0,
+        8.0
+      ],
+      "density": 0.4,
+      "wind_deg": 0.0,
+      "lifetime_sec": [
+        6.0,
+        9.0
+      ],
+      "ground_fade_sec": 12.0,
+      "combat_suppress_factor": 0.4,
+      "note": "交战中密度×0.4，脱战 4s 恢复（见 02 §7）"
+    },
+    {
+      "id": "petal_zone_sakura_grove",
+      "zone": "zone_sakura_grove",
+      "shape": "cylinder",
+      "center": [
+        3.0,
+        14.0,
+        4.6
+      ],
+      "dimensions": [
+        7.0,
+        7.0,
+        8.0
+      ],
+      "density": 0.8,
+      "wind_deg": 0.0,
+      "lifetime_sec": [
+        6.0,
+        9.0
+      ],
+      "ground_fade_sec": 12.0,
+      "combat_suppress_factor": 0.4,
+      "note": "交战中密度×0.4，脱战 4s 恢复（见 02 §7）"
+    },
+    {
+      "id": "petal_zone_okunomori",
+      "zone": "zone_okunomori",
+      "shape": "cylinder",
+      "center": [
+        -2.0,
+        28.0,
+        5.2
+      ],
+      "dimensions": [
+        7.0,
+        7.0,
+        8.0
+      ],
+      "density": 0.2,
+      "wind_deg": 0.0,
+      "lifetime_sec": [
+        6.0,
+        9.0
+      ],
+      "ground_fade_sec": 12.0,
+      "combat_suppress_factor": 0.4,
+      "note": "交战中密度×0.4，脱战 4s 恢复（见 02 §7）"
+    }
+  ]
+}
